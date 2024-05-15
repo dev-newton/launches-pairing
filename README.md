@@ -1,33 +1,41 @@
-## Getting Started
+# FE test.
 
-First, run the development server:
+## Running and Testing the app
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### System Requirements
 
-## Task to be completed
-We would like you to clone this repository and amend the home page to display a list of Cards with the launches data retrieved from the spacex data API. You may take as long as you require to complete the solution to demonstrate your knowledge in creating a web application, however, we ideally would like this returned within 3 days.
+#### Browser
+- Google Chrome
 
-Please consider the structure of your code and develop as if you were working in a commercial team environment and test the solution as you see fit.
+### How to run
+- Clone the repository
+- Run `npm install` from the project root directory to install dependencies.
+- Create a `.env` file in the project root directory and add the following:
+`NEXT_API_ENDPOINT=https://api.spacexdata.com/v5/launches/query`
+- Run `npm run dev` from the project root directory to run the app locally.
+- You can find the project running locally on `http://localhost:3000`
 
-The restful api that we would like you to use is https://api.spacexdata.com/v5/
+### Testing
+- Run `npm test` from the project root directory to run tests.
 
-You can find docs for this API here: https://github.com/r-spacex/SpaceX-API/tree/master/docs#rspacex-api-docs
+### Possible Improvements given more time
+- Write cypress tests for End-to-end testing
+- Break the `Launch` component down into smaller components for reusability
+- Handle errors more descriptively rather than just show a general `Something went wrong` message.
 
-Your solution should cover the following tasks:
-- Make API request(s) on page load
-- Display data top 10 items
-- Provide some test coverage for your project
+### Screenshots
+- Filled state
+<img width="1440" alt="image" src="https://github.com/dev-newton/launches-pairing/assets/43371892/9b3c35f9-fafe-49f7-8081-3ddabd532320">
 
-The data that we would like you to display are:
-- `name`
-- `date_utc`
-- The first core serial/name from `cores`
-- `id` and `type` from payloads
-- display the image from `links.patch.small` in links
-- use `success` and `failures` to show the user the success/failure of launch and reason of failure.
+- Loading skeleton state
+<img width="1440" alt="image" src="https://github.com/dev-newton/launches-pairing/assets/43371892/80f7b1fc-ff72-40da-874c-4feb97a39085">
+
+- Error state
+<img width="1440" alt="image" src="https://github.com/dev-newton/launches-pairing/assets/43371892/09bae80f-6f2c-44da-ada8-d4b745a8d830">
+
+- Test Coverage
+<img width="556" alt="image" src="https://github.com/dev-newton/launches-pairing/assets/43371892/85d72b11-ea34-4b22-9103-8106c77b10c1">
+
+

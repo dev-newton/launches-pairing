@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #fe4a23;
+  --secondary: #ffd027;
+  --light-gray: #f9f9f9;
+  --dark-gray: #0d0d0d;
+}
+
+html,
+body {
+  height: 100%;
+}
